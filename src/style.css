@@ -116,14 +116,11 @@ input::placeholder {
     font-weight: 600;
 }
 
-#email.error input::placeholder {
-    color: var(--red)
-}
-
 #first-name.error input::placeholder,
 #last-name.error input::placeholder,
-#password.error input::placeholder {
-    color: white;
+#password.error input::placeholder,
+#email.error input::placeholder {
+    color: var(--red);
 }
 
 #first-name.error input,
