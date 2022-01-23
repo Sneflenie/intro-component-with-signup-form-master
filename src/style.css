@@ -1,0 +1,292 @@
+:root {
+    /* ### Primary */
+    --red: hsl(0, 100%, 74%);
+    --green: hsl(154, 59%, 51%);
+    /* ### Accent */
+    --blue: hsl(248, 32%, 49%);
+    /* ### Neutral */
+    --dark-blue: hsl(249, 10%, 26%);
+    --grayish-blue: hsl(246, 25%, 77%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url(/images/bg-intro-desktop.png);
+    background-color: var(--red);
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0 auto;
+    width: 80%;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.left,
+.right {
+    width: 50%;
+    max-width: 540px;
+}
+
+.right {
+    margin-left: 30px;
+}
+
+.main-info {
+    margin-right: 40px;
+}
+
+.main-info h1 {
+    font-size: 49px;
+    line-height: 1.1;
+    margin-bottom: 30px;
+}
+
+.try {
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    color: white;
+    width: 100%;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: var(--blue);
+    margin-bottom: 24px;
+    border: none;
+    box-shadow: 0px 7px 0px hsl(249, 10%, 26%, 0.2);
+}
+
+.try span {
+    font-weight: 400;
+    color: var(--grayish-blue);
+}
+
+form {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    background-color: white;
+    padding: 40px 40px 40px;
+    border-radius: 10px;
+    box-shadow: 0px 7px 0px hsl(249, 10%, 26%, 0.2);
+}
+
+input {
+    padding: 15px;
+    width: 100%;
+    margin-top: 20px;
+    border-radius: 5px;
+    border: 1px solid hsl(246, 25%, 77%, 0.5);
+}
+
+input:focus {
+    outline: none !important;
+    border-color: var(--dark-blue);
+}
+
+input::placeholder {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+}
+
+#email.error input::placeholder {
+    color: var(--red)
+}
+
+#first-name.error input::placeholder,
+#last-name.error input::placeholder,
+#password.error input::placeholder {
+    color: white;
+}
+
+#first-name.error input,
+#last-name.error input,
+#email.error input,
+#password.error input {
+    border-color: var(--red);
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    font-family: inherit;
+    font-weight: 600;
+    color: var(--dark-blue);
+    padding-left: 30px;
+}
+
+#email.error input[type="email"] {
+    color: var(--red);
+}
+
+.error-icon-1,
+.error-icon-2,
+.error-icon-3,
+.error-icon-4 {
+    display: none;
+    position: absolute;
+    top: 34px;
+    right: 30px;
+}
+
+#first-name.error .error-icon-1,
+#last-name.error .error-icon-2,
+#email.error .error-icon-3,
+#password.error .error-icon-4 {
+    display: block;
+}
+
+#first-name,
+#last-name,
+#email,
+#password {
+    position: relative;
+    width: 100%;
+}
+
+#first-name.error .p-1,
+#last-name.error .p-2,
+#email.error .p-3,
+#password.error .p-4 {
+    display: flex;
+    justify-content: flex-end;
+    color: var(--red);
+    font-size: 10px;
+    padding: 5px 0;
+}
+
+.p-1,
+.p-2,
+.p-3,
+.p-4 {
+    display: none;
+}
+
+.claim-btn {
+    cursor: pointer;
+    width: 100%;
+    background-color: var(--green);
+    padding: 15px;
+    border-radius: 5px;
+    text-transform: uppercase;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    border: none;
+    border: solid 1px hsl(154, 59%, 44%);
+    border-bottom: solid 4px hsl(154, 59%, 44%);
+    letter-spacing: 1px;
+    margin-top: 20px;
+}
+
+.claim-btn:hover {
+    background-color: hsl(154, 59%, 51%, 0.8);
+}
+
+.terms p {
+    color: var(--grayish-blue);
+    font-size: 10px;
+    margin-top: 15px;
+}
+
+.terms p span {
+    color: var(--red);
+    font-weight: 700;
+}
+
+
+/* Attributions */
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+@media screen and (max-width: 800px) {
+    main {
+        width: 100vw;
+        padding: 100px 0 70px;
+    }
+    .container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 328px;
+        margin: 0 auto;
+    }
+    .left,
+    .right {
+        display: flex;
+        flex-direction: column;
+        max-width: 328px;
+        width: 100%;
+        text-align: center;
+    }
+    .right {
+        margin-left: 0px;
+    }
+    .main-info {
+        margin-right: 0px;
+        margin-bottom: 60px;
+    }
+    .main-info h1 {
+        font-size: 28px;
+        font-weight: 600;
+    }
+    .try {
+        padding: 20px 60px;
+    }
+    form {
+        padding: 25px;
+        padding-top: 35px;
+    }
+    input,
+    .claim-btn {
+        /* margin-top: -10px; */
+        z-index: 1;
+    }
+    form.error input {
+        margin-top: 10px;
+    }
+    .p-1,
+    .p-2,
+    .p-3,
+    .p-4 {
+        display: none;
+    }
+    .claim-btn {
+        margin-bottom: 0;
+    }
+}
